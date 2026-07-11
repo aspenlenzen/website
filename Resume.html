@@ -2,7 +2,7 @@
 <html><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Aspen Scafa Lenzen — Home</title>
+<title>Aspen Scafa Lenzen — Resume</title>
 <link rel="stylesheet" href="styles.css">
 <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
 <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
@@ -30,8 +30,8 @@ function App() {
   const K = { Button, RuledHeading, ValueCard, NavBar, Footer };
   return (
     <div>
-      <NavBar brand="Aspen Scafa Lenzen" logoSrc="assets/owl_wax_seal.png" links={["Home", "Resume", "BoPo Consulting"]} active="Home" onNavigate={setPage} />
-      <Home DS={K} onNavigate={setPage} />
+      <NavBar brand="Aspen Scafa Lenzen" logoSrc="assets/owl_wax_seal.png" links={["Home", "Resume", "BoPo Consulting"]} active="Resume" onNavigate={setPage} />
+      <Resume DS={K} onNavigate={setPage} />
       <Footer />
     </div>
   );
