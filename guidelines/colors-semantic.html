@@ -1,0 +1,14 @@
+<!-- @dsCard group="Colors" viewport="700x170" subtitle="Semantic roles: page, band, inverse, link + accent" name="Colors in use" -->
+<!DOCTYPE html>
+<html><head><link rel="stylesheet" href="../styles.css">
+<style>body{margin:0;font-family:var(--font-body);}
+.grid{display:grid;grid-template-columns:1fr 1fr 1fr;height:170px;}
+.cell{padding:16px 18px;display:flex;flex-direction:column;gap:6px;justify-content:center;}
+h4{margin:0;font-family:var(--font-display);font-weight:500;font-size:20px;letter-spacing:0.05em;text-transform:uppercase;}
+p{margin:0;font-size:13px;line-height:1.5;}
+a{font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;text-decoration:none;}</style></head>
+<body><div class="grid">
+<div class="cell" style="background:var(--bg-page);color:var(--text-body)"><h4 style="color:var(--text-heading)">Page</h4><p>Body copy sits in ink-soft on parchment.</p><a style="color:var(--link)" href="#">Clay link →</a></div>
+<div class="cell" style="background:var(--bg-band);color:var(--text-on-band)"><h4>Band</h4><p>Driftwood section breaks, ink text on top.</p><a style="color:var(--clay-deep)" href="#">Resume →</a></div>
+<div class="cell" style="background:var(--bg-inverse);color:var(--text-on-inverse)"><h4>Inverse</h4><p>Pine-deep for footers and photo captions.</p><a style="color:var(--ochre)" href="#">Ochre link →</a></div>
+</div></body></html>

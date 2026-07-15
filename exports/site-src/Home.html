@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aspen Scafa Lenzen — Home</title>
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<meta name="ext-resource-dependency" content="../../components/core/useIsMobile.jsx" data-resource-id="f0" />
+<meta name="ext-resource-dependency" content="../../components/core/Button.jsx" data-resource-id="f1" />
+<meta name="ext-resource-dependency" content="../../components/core/RuledHeading.jsx" data-resource-id="f2" />
+<meta name="ext-resource-dependency" content="../../components/core/ValueCard.jsx" data-resource-id="f3" />
+<meta name="ext-resource-dependency" content="../../components/navigation/NavBar.jsx" data-resource-id="f4" />
+<meta name="ext-resource-dependency" content="../../components/navigation/Footer.jsx" data-resource-id="f5" />
+<meta name="ext-resource-dependency" content="../../ui_kits/portfolio/PhotoPlaceholder.jsx" data-resource-id="f6" />
+<meta name="ext-resource-dependency" content="../../ui_kits/portfolio/Home.jsx" data-resource-id="f7" />
+<meta name="ext-resource-dependency" content="../../ui_kits/portfolio/Resume.jsx" data-resource-id="f8" />
+<meta name="ext-resource-dependency" content="../../ui_kits/portfolio/caseStudiesData.jsx" data-resource-id="f9" />
+<meta name="ext-resource-dependency" content="../../ui_kits/portfolio/BoPoConsulting.jsx" data-resource-id="f10" />
+<meta name="ext-resource-dependency" content="../../assets/owl_wax_seal.png" data-resource-id="owl" />
+<meta name="ext-resource-dependency" content="../../assets/photo_home_field.jpg" data-resource-id="photoField" />
+<meta name="ext-resource-dependency" content="../../assets/photo_home_sky.jpg" data-resource-id="photoSky" />
+<style>body{margin:0;background:var(--bg-page);} a{color:var(--link);} a:hover{color:var(--link-hover);}</style>
+<template id="__bundler_thumbnail" data-bg-color="#F7F3EA">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#F7F3EA"/>
+    <text x="600" y="420" text-anchor="middle" font-family="Georgia, serif" font-size="140" font-weight="700" letter-spacing="14" fill="#2A331F">ASL</text>
+    <rect x="380" y="480" width="440" height="4" fill="#2A331F"/>
+  </svg>
+</template>
+</head><body>
+<div id="root"></div>
+<script>
+const fileIds = ["f0","f1","f2","f3","f4","f5","f6","f7","f8","f9","f10"];
+const pageFiles = { "Home": "Home.html", "Resume": "Resume.html", "BoPo Consulting": "BoPo Consulting.html" };
+const imageMap = {"../../assets/photo_home_field.jpg":"photoField","../../assets/photo_home_sky.jpg":"photoSky"};
+const appSrc = `
+
+function SkipLink() {
+  const [focus, setFocus] = React.useState(false);
+  return (
+    <a
+      href="#main"
+      onFocus={() => setFocus(true)}
+      onBlur={() => setFocus(false)}
+      style={{ position: "absolute", left: focus ? "16px" : "-9999px", top: "16px", zIndex: 1000, background: "var(--ink)", color: "var(--parchment)", padding: "10px 18px", fontFamily: "var(--font-body)", fontSize: "14px", textDecoration: "none" }}
+    >
+      Skip to main content
+    </a>
+  );
+}
+function App() {
+  const setPage = (page) => { window.location.href = encodeURI(pageFiles[page] || pageFiles["Home"]); };
+  const K = { Button, RuledHeading, ValueCard, NavBar, Footer };
+  return (
+    <div>
+      <SkipLink />
+      <NavBar brand="Aspen Scafa Lenzen" logoSrc={window.__resources.owl} links={["Home", "Resume", "BoPo Consulting"]} active="Home" onNavigate={setPage} />
+      <main id="main"><Home DS={K} onNavigate={setPage} /></main>
+      <Footer />
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+`;
+Promise.all(fileIds.map((id) => fetch(window.__resources[id]).then((r) => r.text()))).then((sources) => {
+  const clean = (src) => src.replace(/^import .*$/gm, "").replace(/^export /gm, "");
+  let src = sources.map(clean).join("\n") + "\n" + appSrc;
+  for (const [path, id] of Object.entries(imageMap)) {
+    src = src.split(JSON.stringify(path)).join(JSON.stringify(window.__resources[id]));
+  }
+  eval(Babel.transform(src, { presets: [["react", { runtime: "classic" }]] }).code);
+});
+</script>
+</body></html>
