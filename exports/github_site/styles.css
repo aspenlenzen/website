@@ -1,0 +1,11 @@
+@import url("tokens/fonts.css");
+@import url("tokens/colors.css");
+@import url("tokens/typography.css");
+@import url("tokens/spacing.css");
+
+@keyframes logo-marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.logo-marquee-track { animation: logo-marquee 78s linear infinite; }
+.logo-marquee-viewport:hover .logo-marquee-track { animation-play-state: paused; }

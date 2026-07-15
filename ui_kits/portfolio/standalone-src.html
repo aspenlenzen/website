@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aspen Scafa Lenzen</title>
+<link rel="stylesheet" href="../../styles.css">
+<meta name="ext-resource-dependency" content="../../components/core/useIsMobile.jsx" data-resource-id="jsxUseIsMobile" />
+<meta name="ext-resource-dependency" content="../../components/core/Button.jsx" data-resource-id="jsxButton" />
+<meta name="ext-resource-dependency" content="../../components/core/RuledHeading.jsx" data-resource-id="jsxRuledHeading" />
+<meta name="ext-resource-dependency" content="../../components/core/ValueCard.jsx" data-resource-id="jsxValueCard" />
+<meta name="ext-resource-dependency" content="../../components/navigation/NavBar.jsx" data-resource-id="jsxNavBar" />
+<meta name="ext-resource-dependency" content="../../components/navigation/Footer.jsx" data-resource-id="jsxFooter" />
+<meta name="ext-resource-dependency" content="./PhotoPlaceholder.jsx" data-resource-id="jsxPhotoPlaceholder" />
+<meta name="ext-resource-dependency" content="./Home.jsx" data-resource-id="jsxHome" />
+<meta name="ext-resource-dependency" content="./Resume.jsx" data-resource-id="jsxResume" />
+<meta name="ext-resource-dependency" content="./caseStudiesData.jsx" data-resource-id="jsxCaseData" />
+<meta name="ext-resource-dependency" content="./BoPoConsulting.jsx" data-resource-id="jsxBoPo" />
+<meta name="ext-resource-dependency" content="../../assets/owl_wax_seal.png" data-resource-id="imgOwl" />
+<meta name="ext-resource-dependency" content="../../assets/photo_home_field.jpg" data-resource-id="imgHomeField" />
+<meta name="ext-resource-dependency" content="../../assets/photo_home_sky.jpg" data-resource-id="imgHomeSky" />
+<meta name="ext-resource-dependency" content="../../assets/photo_resume_1.jpg" data-resource-id="imgResume1" />
+<meta name="ext-resource-dependency" content="../../assets/photo_resume_2.jpg" data-resource-id="imgResume2" />
+<meta name="ext-resource-dependency" content="../../assets/logos/cantos-dark.png" data-resource-id="logoCantos" />
+<meta name="ext-resource-dependency" content="../../assets/logos/atlas.webp" data-resource-id="logoAtlas" />
+<meta name="ext-resource-dependency" content="../../assets/logos/boom-capital.png" data-resource-id="logoBoom" />
+<meta name="ext-resource-dependency" content="../../assets/logos/crush-studio.png" data-resource-id="logoCrush" />
+<meta name="ext-resource-dependency" content="../../assets/logos/susan-gordon.png" data-resource-id="logoSusan" />
+<meta name="ext-resource-dependency" content="../../assets/logos/yearly.webp" data-resource-id="logoYearly" />
+<meta name="ext-resource-dependency" content="../../assets/logos/corcoran.svg" data-resource-id="logoCorcoran" />
+<script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<style>body{margin:0;background:var(--bg-page);} a{color:var(--link);} a:hover{color:var(--link-hover);}</style>
+</head><body>
+<template id="__bundler_thumbnail" data-bg-color="#f4efe5">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#f4efe5"/>
+    <line x1="360" y1="400" x2="500" y2="400" stroke="#b0653d" stroke-width="4"/>
+    <line x1="700" y1="400" x2="840" y2="400" stroke="#b0653d" stroke-width="4"/>
+    <text x="600" y="435" text-anchor="middle" font-family="Georgia, serif" font-size="120" fill="#2a331f">ASL</text>
+  </svg>
+</template>
+<div id="root"></div>
+<script>
+const jsxIds = [
+  "jsxUseIsMobile",
+  "jsxButton", "jsxRuledHeading", "jsxValueCard", "jsxNavBar", "jsxFooter",
+  "jsxPhotoPlaceholder", "jsxHome", "jsxResume", "jsxCaseData", "jsxBoPo",
+];
+const R = window.__resources || {};
+const assetMap = {
+  "../../assets/owl_wax_seal.png": R.imgOwl,
+  "../../assets/photo_home_field.jpg": R.imgHomeField,
+  "../../assets/photo_home_sky.jpg": R.imgHomeSky,
+  "../../assets/photo_resume_1.jpg": R.imgResume1,
+  "../../assets/photo_resume_2.jpg": R.imgResume2,
+  "../../assets/logos/cantos-dark.png": R.logoCantos,
+  "../../assets/logos/atlas.webp": R.logoAtlas,
+  "../../assets/logos/boom-capital.png": R.logoBoom,
+  "../../assets/logos/crush-studio.png": R.logoCrush,
+  "../../assets/logos/susan-gordon.png": R.logoSusan,
+  "../../assets/logos/yearly.webp": R.logoYearly,
+  "../../assets/logos/corcoran.svg": R.logoCorcoran,
+};
+const appSrc = `
+
+function SkipLink() {
+  const [focus, setFocus] = React.useState(false);
+  return (
+    <a
+      href="#main"
+      onFocus={() => setFocus(true)}
+      onBlur={() => setFocus(false)}
+      style={{ position: "absolute", left: focus ? "16px" : "-9999px", top: "16px", zIndex: 1000, background: "var(--ink)", color: "var(--parchment)", padding: "10px 18px", fontFamily: "var(--font-body)", fontSize: "14px", textDecoration: "none" }}
+    >
+      Skip to main content
+    </a>
+  );
+}
+function App() {
+  const [page, setPageRaw] = React.useState("Home");
+  const setPage = (p) => { setPageRaw(p); window.scrollTo(0, 0); };
+  const Screen = page === "Home" ? Home : page === "Resume" ? Resume : BoPoConsulting;
+  const K = { Button, RuledHeading, ValueCard, NavBar, Footer };
+  return (
+    <div>
+      <SkipLink />
+      <NavBar brand="Aspen Scafa Lenzen" logoSrc="../../assets/owl_wax_seal.png" links={["Home", "Resume", "BoPo Consulting"]} active={page} onNavigate={setPage} />
+      <main id="main"><Screen DS={K} onNavigate={setPage} /></main>
+      <Footer />
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+`;
+Promise.all(jsxIds.map((id) => fetch(R[id]).then((r) => r.text()))).then((sources) => {
+  const clean = (src) => src.replace(/^import .*$/gm, "").replace(/^export /gm, "");
+  let src = sources.map(clean).join("\n") + "\n" + appSrc;
+  for (const [path, blobUrl] of Object.entries(assetMap)) {
+    if (blobUrl) src = src.split(path).join(blobUrl);
+  }
+  eval(Babel.transform(src, { presets: [["react", { runtime: "classic" }]] }).code);
+});
+</script>
+</body></html>

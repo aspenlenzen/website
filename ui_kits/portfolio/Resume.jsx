@@ -136,9 +136,9 @@ export function Resume({ DS }) {
   return (
     <div style={{ background: "var(--bg-page)", paddingBottom: "104px" }}>
       {/* Title + photo */}
-      <div style={{ maxWidth: "1100px", margin: "0 auto", padding: mobile ? "48px 24px 0" : "72px 40px 0" }}>
-        <div style={{ display: "flex", flexDirection: "column", gap: "28px", width: "100%", alignItems: "center", paddingTop: "50px", paddingBottom: "50px" }}>
-          <h1 style={{ fontFamily: "var(--font-display)", fontWeight: "var(--type-display-weight)", lineHeight: "var(--type-display-leading)", color: "var(--text-heading)", textAlign: "center", margin: 0, fontSize: mobile ? "38px" : "64px", letterSpacing: "var(--type-hero-tracking)", textTransform: "uppercase" }}>
+      <div style={{ maxWidth: "1100px", margin: "0 auto", padding: mobile ? "28px 24px 0" : "36px 40px 0" }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: "28px", width: "100%", alignItems: "center", paddingTop: "8px", paddingBottom: "50px" }}>
+          <h1 style={{ fontFamily: "var(--font-display)", fontWeight: "var(--type-display-weight)", lineHeight: "var(--type-display-leading)", color: "var(--text-heading)", textAlign: "center", margin: 0, fontSize: mobile ? "38px" : "64px", letterSpacing: "var(--type-hero-tracking)", textTransform: "capitalize" }}>
             Resume
           </h1>
           <div style={{ borderTop: "var(--rule-weight) solid var(--border)", width: "75%", alignSelf: "center" }} />

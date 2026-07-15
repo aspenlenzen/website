@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BoPo Consulting — Aspen Scafa Lenzen</title>
+<link rel="stylesheet" href="../styles.css">
+<script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<meta name="ext-resource-dependency" content="../components/core/useIsMobile.jsx" data-resource-id="f0" />
+<meta name="ext-resource-dependency" content="../components/core/Button.jsx" data-resource-id="f1" />
+<meta name="ext-resource-dependency" content="../components/core/RuledHeading.jsx" data-resource-id="f2" />
+<meta name="ext-resource-dependency" content="../components/core/ValueCard.jsx" data-resource-id="f3" />
+<meta name="ext-resource-dependency" content="../components/navigation/NavBar.jsx" data-resource-id="f4" />
+<meta name="ext-resource-dependency" content="../components/navigation/Footer.jsx" data-resource-id="f5" />
+<meta name="ext-resource-dependency" content="../ui_kits/portfolio/PhotoPlaceholder.jsx" data-resource-id="f6" />
+<meta name="ext-resource-dependency" content="../ui_kits/portfolio/Home.jsx" data-resource-id="f7" />
+<meta name="ext-resource-dependency" content="../ui_kits/portfolio/Resume.jsx" data-resource-id="f8" />
+<meta name="ext-resource-dependency" content="../ui_kits/portfolio/caseStudiesData.jsx" data-resource-id="f9" />
+<meta name="ext-resource-dependency" content="../ui_kits/portfolio/BoPoConsulting.jsx" data-resource-id="f10" />
+<meta name="ext-resource-dependency" content="../assets/owl_wax_seal.png" data-resource-id="owl" />
+<meta name="ext-resource-dependency" content="../assets/logos/crush-studio.png" data-resource-id="logoCrush" />
+<meta name="ext-resource-dependency" content="../assets/logos/atlas.webp" data-resource-id="logoAtlas" />
+<meta name="ext-resource-dependency" content="../assets/logos/cantos-dark.png" data-resource-id="logoCantos" />
+<meta name="ext-resource-dependency" content="../assets/logos/boom-capital.png" data-resource-id="logoBoom" />
+<meta name="ext-resource-dependency" content="../assets/logos/susan-gordon.png" data-resource-id="logoSusan" />
+<meta name="ext-resource-dependency" content="../assets/logos/yearly.webp" data-resource-id="logoYearly" />
+<meta name="ext-resource-dependency" content="../assets/logos/corcoran.svg" data-resource-id="logoCorcoran" />
+<meta name="ext-resource-dependency" content="../assets/logos/togather.png" data-resource-id="logoTogather" />
+<style>body{margin:0;background:var(--bg-page);} a{color:var(--link);} a:hover{color:var(--link-hover);}</style>
+<template id="__bundler_thumbnail" data-bg-color="#F7F3EA">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#F7F3EA"/>
+    <text x="600" y="380" text-anchor="middle" font-family="Georgia, serif" font-size="120" font-weight="700" letter-spacing="12" fill="#2A331F">BOPO</text>
+    <rect x="300" y="440" width="600" height="4" fill="#2A331F"/>
+    <text x="600" y="520" text-anchor="middle" font-family="Georgia, serif" font-size="42" letter-spacing="8" fill="#6B6455">CONSULTING</text>
+  </svg>
+</template>
+</head><body>
+<div id="root"></div>
+<script>
+const fileIds = ["f0","f1","f2","f3","f4","f5","f6","f7","f8","f9","f10"];
+const pageFiles = { "Home": "index.html", "Resume": "Resume.html", "BoPo Consulting": "BoPo Consulting.html" };
+const logoMap = {
+  "../../assets/logos/crush-studio.png": "logoCrush",
+  "../../assets/logos/atlas.webp": "logoAtlas",
+  "../../assets/logos/cantos-dark.png": "logoCantos",
+  "../../assets/logos/boom-capital.png": "logoBoom",
+  "../../assets/logos/susan-gordon.png": "logoSusan",
+  "../../assets/logos/yearly.webp": "logoYearly",
+  "../../assets/logos/corcoran.svg": "logoCorcoran",
+  "../../assets/logos/togather.png": "logoTogather",
+};
+const appSrc = `
+
+function SkipLink() {
+  const [focus, setFocus] = React.useState(false);
+  return (
+    <a
+      href="#main"
+      onFocus={() => setFocus(true)}
+      onBlur={() => setFocus(false)}
+      style={{ position: "absolute", left: focus ? "16px" : "-9999px", top: "16px", zIndex: 1000, background: "var(--ink)", color: "var(--parchment)", padding: "10px 18px", fontFamily: "var(--font-body)", fontSize: "14px", textDecoration: "none" }}
+    >
+      Skip to main content
+    </a>
+  );
+}
+function App() {
+  const setPage = (p) => {};
+  const K = { Button, RuledHeading, ValueCard, NavBar, Footer };
+  return (
+    <div>
+      <SkipLink />
+      <NavBar brand="Aspen Scafa Lenzen" logoSrc={window.__resources.owl} links={["BoPo Consulting"]} active="BoPo Consulting" onNavigate={setPage} />
+      <main id="main"><BoPoConsulting DS={K} onNavigate={setPage} /></main>
+      <Footer />
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+`;
+Promise.all(fileIds.map((id) => fetch(window.__resources[id]).then((r) => r.text()))).then((sources) => {
+  const clean = (src) => src.replace(/^import .*$/gm, "").replace(/^export /gm, "");
+  let src = sources.map(clean).join("\n") + "\n" + appSrc;
+  for (const [path, id] of Object.entries(logoMap)) {
+    src = src.split(JSON.stringify(path)).join(JSON.stringify(window.__resources[id]));
+  }
+  eval(Babel.transform(src, { presets: [["react", { runtime: "classic" }]] }).code);
+});
+</script>
+</body></html>

@@ -35,11 +35,7 @@ export function Home({ DS, onNavigate }) {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        width: mobile ? "168px" : "220px",
-        height: mobile ? "104px" : "132px",
-        background: "transparent",
-        borderRadius: "6px",
-        padding: "10px 14px",
+        height: mobile ? "72px" : "88px",
         boxSizing: "border-box",
       }}
     >
@@ -47,8 +43,10 @@ export function Home({ DS, onNavigate }) {
         src={item.src}
         alt={item.alt}
         style={{
-          maxWidth: "100%",
-          maxHeight: "100%",
+          width: "auto",
+          height: "auto",
+          maxHeight: mobile ? "72px" : "88px",
+          maxWidth: mobile ? "150px" : "200px",
           objectFit: "contain",
           filter: item.invert ? "invert(1)" : "none",
         }}
@@ -63,11 +61,11 @@ export function Home({ DS, onNavigate }) {
   return (
     <div style={{ background: "var(--bg-page)" }}>
       {/* Hero */}
-      <div style={{ maxWidth: "1100px", margin: "0 auto", padding: mobile ? "48px 24px 0" : "72px 40px 96px" }}>
+      <div style={{ maxWidth: "1100px", margin: "0 auto", padding: mobile ? "28px 24px 0" : "36px 40px 96px" }}>
         <div style={{ fontFamily: "var(--font-display)", fontSize: mobile ? "24px" : "36px", fontWeight: "var(--type-display-weight)", lineHeight: "var(--type-display-leading)", color: "var(--text-heading)", marginBottom: "32px", fontStyle: "italic", textAlign: "center" }}>
           Aspen Scafa Lenzen
         </div>
-        <h1 style={{ fontFamily: "var(--font-display)", fontSize: mobile ? "32px" : "var(--type-hero-size)", fontWeight: "var(--type-display-weight)", lineHeight: "var(--type-display-leading)", color: "var(--text-heading)", margin: 0, marginBottom: "32px", letterSpacing: "var(--type-hero-tracking)", textTransform: "none", width: mobile ? "100%" : "1178px", height: "auto", textAlign: "center", marginLeft: "auto", marginRight: "auto" }}>
+        <h1 style={{ fontFamily: "var(--font-display)", fontSize: mobile ? "32px" : "var(--type-hero-size)", fontWeight: "var(--type-display-weight)", lineHeight: "var(--type-display-leading)", color: "var(--text-heading)", margin: 0, marginBottom: "32px", letterSpacing: "var(--type-hero-tracking)", textTransform: "none", width: "100%", maxWidth: "100%", height: "auto", textAlign: "center", marginLeft: "auto", marginRight: "auto" }}>
           Connecting <i>People</i> and <i>Ideas</i>
         </h1>
         <div style={{ width: mobile ? "75%" : "75%", height: "1px", background: "var(--border)", margin: "0 auto" }} />
@@ -157,7 +155,7 @@ export function Home({ DS, onNavigate }) {
               </div>
             ))}
           </div>
-          <div>
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: "12px" }}>
             <Button
               variant="outline"
               href="Resume.html"
@@ -167,6 +165,16 @@ export function Home({ DS, onNavigate }) {
               }}
             >
               Resume →
+            </Button>
+            <Button
+              variant="outline"
+              href="Consulting.html"
+              onClick={(e) => {
+                e.preventDefault();
+                onNavigate && onNavigate("BoPo Consulting");
+              }}
+            >
+              Consulting Work →
             </Button>
           </div>
         </div>
@@ -225,7 +233,7 @@ export function Home({ DS, onNavigate }) {
             WebkitMaskImage: "linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent)",
           }}
         >
-          <div className="logo-marquee-track" style={{ display: "flex", gap: mobile ? "4px" : "8px", width: "max-content" }}>
+          <div className="logo-marquee-track" style={{ display: "flex", alignItems: "center", gap: mobile ? "40px" : "64px", width: "max-content" }}>
             {logos.map((item, i) => <LogoTile item={item} k={"a" + i} key={"a" + i} />)}
             {logos.map((item, i) => <LogoTile item={item} k={"b" + i} key={"b" + i} />)}
           </div>

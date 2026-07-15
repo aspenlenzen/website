@@ -57,8 +57,8 @@ export function BoPoConsulting({ DS }) {
   const testimonials = [
     {
       quote: "I had the pleasure of working with Aspen and was impressed by her curiosity and commitment to growth. Aspen approaches challenges with thoughtfulness and brings a unique perspective that enhances collaboration and problem-solving. She is naturally tech-savvy and quick to adopt new tools, which allows her to contribute efficiently and effectively.",
-      name: "Ashleigh Watts",
-      title: "Learning & Development Leader"
+      name: "Ash Watts",
+      title: "Learning & Development Leader, Cisco"
     },
     {
       quote: "Aspen project managed our first annual meeting, a high-stakes and complicated gathering that thanks to her went off without a hitch!",
@@ -149,22 +149,23 @@ export function BoPoConsulting({ DS }) {
 
   return (
     <div style={{ background: "var(--bg-page)", paddingBottom: "104px" }} data-screen-label="BoPo Consulting">
-      <div style={{ maxWidth: "1360px", margin: "0 auto", padding: mobile ? "48px 24px 0" : "72px 40px 0" }}>
+      <div style={{ maxWidth: "1360px", margin: "0 auto", padding: mobile ? "28px 24px 0" : "36px 40px 0" }}>
         <div style={{ display: "flex", flexDirection: "column", gap: "28px", width: "100%", alignItems: "center" }}>
-          <h1 style={{ fontFamily: "var(--font-display)", fontWeight: "var(--type-display-weight)", lineHeight: "var(--type-display-leading)", color: "var(--text-heading)", textAlign: "center", margin: 0, fontSize: mobile ? "34px" : "64px", letterSpacing: "var(--type-hero-tracking)", textTransform: "uppercase" }}>
-            BoPo Consulting
+          <h1 style={{ fontFamily: "var(--font-display)", fontWeight: "var(--type-display-weight)", lineHeight: "var(--type-display-leading)", color: "var(--text-heading)", textAlign: "center", margin: 0, fontSize: mobile ? "34px" : "64px", letterSpacing: "var(--type-hero-tracking)", textTransform: "capitalize" }}>
+            Independent Consulting
           </h1>
           <div style={{ borderTop: "var(--rule-weight) solid var(--border)", width: "75%" }} />
         </div>
-        <p style={{ ...body, fontSize: "18px", textAlign: "center", maxWidth: "60ch", margin: "40px auto 0" }}>
-          Case studies from client engagements. Click a client to read the full story.
-          <br />
-          <a href="#testimonials" style={{ color: "var(--link)", textDecoration: "none", fontWeight: 700 }}>See client testimonials ↓</a>
+        <p style={{ ...body, fontSize: "18px", textAlign: "center", maxWidth: "72ch", margin: "40px auto 0" }}>
+          Through my consulting practice, I partner with founders and small teams to turn operational chaos into systems that hold, building custom Airtable databases and internal tools, designing operations and program workflows, and running high-stakes events.
+        </p>
+        <p style={{ ...body, fontSize: "18px", textAlign: "center", maxWidth: "72ch", margin: "20px auto 0" }}>
+          I've partnered with nonprofits, global enterprises, and startups across venture capital, creative studios, e-commerce, real estate, and woman-owned brands, designing systems that reduce friction, increase capacity, and help people and programs thrive.
         </p>
       {/* Testimonials Section */}
       <div style={{ padding: mobile ? "48px 0 0" : "64px 0 0" }} id="testimonials">
         <div style={{ display: "flex", flexDirection: "column", gap: "28px", width: "100%", alignItems: "center", marginBottom: "40px" }}>
-          <h2 style={{ fontFamily: "var(--font-display)", fontWeight: "var(--type-display-weight)", lineHeight: "var(--type-display-leading)", color: "var(--text-heading)", textAlign: "center", margin: 0, fontSize: mobile ? "34px" : "48px", letterSpacing: "var(--type-hero-tracking)", textTransform: "uppercase" }}>
+          <h2 style={{ fontFamily: "var(--font-display)", fontWeight: "var(--type-display-weight)", lineHeight: "var(--type-display-leading)", color: "var(--text-heading)", textAlign: "center", margin: 0, fontSize: mobile ? "34px" : "48px", letterSpacing: "var(--type-hero-tracking)", textTransform: "capitalize" }}>
             What People Are Saying
           </h2>
           <div style={{ borderTop: "var(--rule-weight) solid var(--border)", width: "75%" }} />

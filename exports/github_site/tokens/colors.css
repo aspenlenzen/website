@@ -1,0 +1,38 @@
+:root {
+  /* ── Base neutrals (from the current site) ─────────────── */
+  --parchment: #f4efe5;      /* page background */
+  --parchment-deep: #eae2d2; /* alt band / card fill */
+  --driftwood: #a89b8b;      /* taupe section background */
+  --driftwood-light: #bfb4a6;/* footer band */
+  --ink: #2a331f;            /* deep forest-green text */
+  --ink-soft: #515a41;       /* muted green text on parchment */
+
+  /* ── Adventure accents (new, warm + outdoorsy) ─────────── */
+  --pine: #41523e;           /* deep forest green */
+  --pine-deep: #2e3b2c;
+  --clay: #b0653d;           /* terracotta / canyon clay */
+  --clay-deep: #8f4e2d;
+  --ochre: #c08a3e;          /* golden-hour honey */
+  --moss: #7d8163;           /* soft sage-moss, quiet accent */
+
+  /* ── Semantic aliases ──────────────────────────────────── */
+  --bg-page: var(--parchment);
+  --bg-band: var(--driftwood);
+  --bg-band-light: var(--driftwood-light);
+  --bg-card: var(--parchment-deep);
+  --bg-inverse: var(--pine-deep);
+
+  --text-heading: var(--ink);
+  --text-body: var(--ink-soft);
+  --text-on-band: var(--ink);
+  --text-on-inverse: var(--parchment);
+
+  --accent: var(--clay);
+  --accent-strong: var(--clay-deep);
+  --accent-quiet: #5f6349;   /* darkened moss — meets WCAG AA for small labels */
+  --link: var(--clay-deep);
+  --link-hover: var(--pine);
+
+  --border: rgba(42, 51, 31, 0.75);      /* thin editorial rules */
+  --border-faint: rgba(42, 51, 31, 0.18);
+}
