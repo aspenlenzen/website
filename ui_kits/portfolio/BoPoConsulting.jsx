@@ -157,10 +157,7 @@ export function BoPoConsulting({ DS }) {
           <div style={{ borderTop: "var(--rule-weight) solid var(--border)", width: "75%" }} />
         </div>
         <p style={{ ...body, fontSize: "18px", textAlign: "center", maxWidth: "72ch", margin: "40px auto 0" }}>
-          Through my consulting practice, I partner with founders and small teams to turn operational chaos into systems that hold, building custom Airtable databases and internal tools, designing operations and program workflows, and running high-stakes events.
-        </p>
-        <p style={{ ...body, fontSize: "18px", textAlign: "center", maxWidth: "72ch", margin: "20px auto 0" }}>
-          I've partnered with nonprofits, global enterprises, and startups across venture capital, creative studios, e-commerce, real estate, and woman-owned brands, designing systems that reduce friction, increase capacity, and help people and programs thrive.
+          I partner with founders and small teams to turn operational chaos into systems, building custom Airtable databases and internal tools, designing operations and program workflows, and helping customers and communities connect.
         </p>
       {/* Testimonials Section */}
       <div style={{ padding: mobile ? "48px 0 0" : "64px 0 0" }} id="testimonials">

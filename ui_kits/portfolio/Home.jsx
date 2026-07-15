@@ -169,10 +169,6 @@ export function Home({ DS, onNavigate }) {
             <Button
               variant="outline"
               href="Consulting.html"
-              onClick={(e) => {
-                e.preventDefault();
-                onNavigate && onNavigate("BoPo Consulting");
-              }}
             >
               Consulting Work →
             </Button>
@@ -183,7 +179,7 @@ export function Home({ DS, onNavigate }) {
       {/* Values band */}
       <div style={{ background: "#F4EFE5", padding: mobile ? "64px 24px 48px" : "104px 64px 72px" }}>
         <RuledHeading level="section" style={{ marginBottom: "72px" }}>
-          Connecting People &amp; Ideas
+          What Drives Me
         </RuledHeading>
         <div style={{ display: "flex", flexDirection: mobile ? "column" : "row", alignItems: "center", gap: mobile ? "48px" : "64px", justifyContent: "center" }}>
           <ValueCard title="People First">

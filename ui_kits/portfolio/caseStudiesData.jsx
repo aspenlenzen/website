@@ -27,7 +27,8 @@ const caseStudies = [
       ],
       "contract": [
         "Airtable Build",
-        "Operations"
+        "Operations",
+        "People Operations"
       ]
     },
     "dates": "July 2023 — December 2023",
@@ -296,7 +297,8 @@ const caseStudies = [
       ],
       "contract": [
         "Program Management",
-        "Events"
+        "Events",
+        "Strategy"
       ]
     },
     "dates": "September 2022 — February 2023",
