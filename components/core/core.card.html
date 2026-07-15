@@ -1,0 +1,37 @@
+<!-- @dsCard group="Components" viewport="700x260" name="Core" subtitle="Button variants, ruled headings, value card" -->
+<!DOCTYPE html>
+<html><head>
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<style>body{margin:0;background:var(--bg-page);}</style>
+</head><body>
+<div id="root"></div>
+<script>
+const files = [
+  "../core/useIsMobile.jsx","./Button.jsx", "./RuledHeading.jsx", "./ValueCard.jsx"];
+const demoSrc = `
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <div style={{ display: "flex", alignItems: "center", gap: "36px", padding: "24px 28px" }}>
+    <div style={{ display: "flex", flexDirection: "column", gap: "14px", alignItems: "flex-start" }}>
+      <Button variant="outline">Resume →</Button>
+      <Button variant="filled">Get in touch</Button>
+      <Button variant="link">See all photos →</Button>
+    </div>
+    <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: "18px" }}>
+      <RuledHeading level="hero" style={{ fontSize: "34px" }}>Into the Field</RuledHeading>
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <ValueCard title="People First">Everything I do comes back to the people behind the work.</ValueCard>
+      </div>
+    </div>
+  </div>
+);
+`;
+Promise.all(files.map((f) => fetch(f).then((r) => r.text()))).then((sources) => {
+  const clean = (src) => src.replace(/^import .*$/gm, "").replace(/^export /gm, "");
+  const src = sources.map(clean).join("\n") + "\n" + demoSrc;
+  eval(Babel.transform(src, { presets: [["react", { runtime: "classic" }]] }).code);
+});
+</script>
+</body></html>
