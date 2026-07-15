@@ -2,7 +2,7 @@
 <html lang="en"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Aspen Scafa Lenzen — Home</title>
+<title>BoPo Consulting — Aspen Scafa Lenzen</title>
 <link rel="stylesheet" href="styles.css">
 <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
 <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
@@ -46,8 +46,8 @@ function App() {
   return (
     <div>
       <SkipLink />
-      <NavBar brand="Aspen Scafa Lenzen" logoSrc="assets/owl_wax_seal.png" links={["Home", "Resume", "Consulting"]} active="Home" onNavigate={setPage} />
-      <main id="main"><Home DS={K} onNavigate={setPage} /></main>
+      <NavBar brand="Aspen Scafa Lenzen" logoSrc="assets/owl_wax_seal.png" links={["Home", "Resume", "Consulting"]} active="Consulting" onNavigate={setPage} />
+      <main id="main"><BoPoConsulting DS={K} onNavigate={setPage} /></main>
       <Footer />
     </div>
   );

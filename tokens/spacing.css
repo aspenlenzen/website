@@ -1,0 +1,14 @@
+:root {
+  /* Editorial, airy spacing — sections breathe */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 40px;
+  --space-5: 64px;
+  --space-6: 104px;
+  --space-section: 160px; /* vertical rhythm between page bands */
+
+  --radius-none: 0px;     /* the system is square-cornered throughout */
+  --rule-weight: 1.5px;   /* horizontal rules framing headings */
+  --measure-body: 46ch;   /* max width of body paragraphs */
+}
