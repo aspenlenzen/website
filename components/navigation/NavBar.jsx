@@ -39,9 +39,9 @@ export function NavBar({ brand = "ASL", logoSrc, links = ["Home", "Resume"], act
         <div
           style={{
             fontFamily: "var(--font-display)",
-            fontWeight: 600,
+            fontWeight: 400,
             fontSize: "26px",
-            letterSpacing: "0.06em",
+            letterSpacing: "0.03em",
             color: "var(--text-heading)",
           }}
         >
@@ -63,12 +63,13 @@ export function NavBar({ brand = "ASL", logoSrc, links = ["Home", "Resume"], act
               letterSpacing: "0.08em",
               textDecoration: "none",
               color: "var(--text-heading)",
-              fontWeight: l === active ? 700 : 400,
+              fontWeight: l === active ? 500 : 400,
+              color: l === active ? "var(--accent)" : "var(--text-heading)",
               borderBottom: l === active ? "1.5px solid var(--accent)" : "1.5px solid transparent",
               paddingBottom: "4px",
             }}
           >
-            {l}
+            {l === "Resume" ? "R\u00e9sum\u00e9" : l}
           </a>
         ))}
       </div>

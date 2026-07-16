@@ -8,7 +8,7 @@ export function Footer({ name = "Aspen Scafa Lenzen", links = [{ label: "LinkedI
   return (
     <footer
       style={{
-        background: "var(--bg-band-light)",
+        background: "var(--bg-inverse)",
         textAlign: "center",
         padding: "72px 24px",
         fontFamily: "var(--font-body)",
@@ -18,11 +18,10 @@ export function Footer({ name = "Aspen Scafa Lenzen", links = [{ label: "LinkedI
       <div
         style={{
           fontFamily: "var(--font-display)",
-          fontWeight: 500,
+          fontWeight: 400,
           fontSize: mobile ? "22px" : "32px",
-          letterSpacing: "0.05em",
-          textTransform: "uppercase",
-          color: "var(--text-heading)",
+          letterSpacing: "0.03em",
+          color: "var(--text-on-inverse)",
           marginBottom: "28px",
         }}
       >
@@ -65,7 +64,7 @@ export function Footer({ name = "Aspen Scafa Lenzen", links = [{ label: "LinkedI
               rel="noreferrer"
               aria-label={label + " (opens in a new tab)"}
               style={{
-                color: "var(--ink)",
+                color: "var(--text-on-inverse)",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
