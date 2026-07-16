@@ -1,38 +1,51 @@
 :root {
-  /* ── Base neutrals (from the current site) ─────────────── */
-  --parchment: #f4efe5;      /* page background */
-  --parchment-deep: #eae2d2; /* alt band / card fill */
-  --driftwood: #a89b8b;      /* taupe section background */
-  --driftwood-light: #bfb4a6;/* footer band */
-  --ink: #2a331f;            /* deep forest-green text */
-  --ink-soft: #515a41;       /* muted green text on parchment */
+  /* ── Personal-site-brand palette ───────────────────────── */
+  --color-cream: #F5F1E8;   /* page background — the default canvas */
+  --color-ink:   #26291C;   /* body text — near-black olive */
+  --color-rust:  #672E23;   /* THE accent: links, primary buttons, highlights */
+  --color-olive: #3E5829;   /* headings, footer, strong structure */
+  --color-sage:  #7A8A66;   /* secondary buttons, tag borders */
+  --color-taupe: #8B856C;   /* muted text: captions, dates, metadata */
+  --color-tan:   #D0B59A;   /* card tint, dividers, hairlines */
 
-  /* ── Adventure accents (new, warm + outdoorsy) ─────────── */
-  --pine: #41523e;           /* deep forest green */
-  --pine-deep: #2e3b2c;
-  --clay: #b0653d;           /* terracotta / canyon clay */
-  --clay-deep: #8f4e2d;
-  --ochre: #c08a3e;          /* golden-hour honey */
-  --moss: #7d8163;           /* soft sage-moss, quiet accent */
+  /* Support shades derived from the palette */
+  --color-rust-deep:  #4E2119;
+  --color-olive-deep: #2B3D1C;
+  --color-cream-tint: #EDE4D3; /* subtle tan-tinted card fill */
+
+  /* ── Legacy base aliases (kept so existing markup resolves) ─ */
+  --parchment: var(--color-cream);
+  --parchment-deep: var(--color-cream-tint);
+  --driftwood: var(--color-taupe);
+  --driftwood-light: var(--color-olive);
+  --ink: var(--color-ink);
+  --ink-soft: var(--color-olive);
+  --pine: var(--color-olive);
+  --pine-deep: var(--color-olive-deep);
+  --clay: var(--color-rust);
+  --clay-deep: var(--color-rust-deep);
+  --ochre: var(--color-sage);
+  --moss: var(--color-sage);
 
   /* ── Semantic aliases ──────────────────────────────────── */
-  --bg-page: var(--parchment);
-  --bg-band: var(--driftwood);
-  --bg-band-light: var(--driftwood-light);
-  --bg-card: var(--parchment-deep);
-  --bg-inverse: var(--pine-deep);
+  --bg-page: var(--color-cream);
+  --bg-band: var(--color-cream-tint);
+  --bg-band-light: var(--color-cream-tint);
+  --bg-card: var(--color-cream-tint);
+  --bg-inverse: var(--color-olive);
 
-  --text-heading: var(--ink);
-  --text-body: var(--ink-soft);
-  --text-on-band: var(--ink);
-  --text-on-inverse: var(--parchment);
+  --text-heading: var(--color-olive);
+  --text-body: var(--color-ink);
+  --text-on-band: var(--color-ink);
+  --text-on-inverse: var(--color-cream);
+  --text-muted: var(--color-taupe);
 
-  --accent: var(--clay);
-  --accent-strong: var(--clay-deep);
-  --accent-quiet: #5f6349;   /* darkened moss — meets WCAG AA for small labels */
-  --link: var(--clay-deep);
-  --link-hover: var(--pine);
+  --accent: var(--color-rust);
+  --accent-strong: var(--color-rust);
+  --accent-quiet: var(--color-taupe);
+  --link: var(--color-rust);
+  --link-hover: var(--color-olive);
 
-  --border: rgba(42, 51, 31, 0.75);      /* thin editorial rules */
-  --border-faint: rgba(42, 51, 31, 0.18);
+  --border: var(--color-tan);              /* 1px tan hairlines */
+  --border-faint: rgba(208, 181, 154, 0.5);
 }

@@ -139,7 +139,7 @@ export function Resume({ DS }) {
       <div style={{ maxWidth: "1100px", margin: "0 auto", padding: mobile ? "28px 24px 0" : "36px 40px 0" }}>
         <div style={{ display: "flex", flexDirection: "column", gap: "28px", width: "100%", alignItems: "center", paddingTop: "8px", paddingBottom: "50px" }}>
           <h1 style={{ fontFamily: "var(--font-display)", fontWeight: "var(--type-display-weight)", lineHeight: "var(--type-display-leading)", color: "var(--text-heading)", textAlign: "center", margin: 0, fontSize: mobile ? "38px" : "64px", letterSpacing: "var(--type-hero-tracking)", textTransform: "capitalize" }}>
-            Resume
+            Résumé
           </h1>
           <div style={{ borderTop: "var(--rule-weight) solid var(--border)", width: "75%", alignSelf: "center" }} />
         </div>
@@ -240,13 +240,13 @@ export function Resume({ DS }) {
       </div>
 
       {/* Work experience */}
-      <div style={{ maxWidth: "1100px", margin: "0 auto", padding: mobile ? "64px 24px 0" : "104px 40px 0" }}>
+      <div style={{ maxWidth: "1260px", margin: "0 auto", padding: mobile ? "64px 24px 0" : "104px 40px 0" }}>
         <RuledHeading level="section" style={{ marginBottom: "72px" }}>Work Experience</RuledHeading>
         <div style={{ display: "flex", flexDirection: "column", gap: "44px" }}>
           {jobs.map((j) => (
-            <div key={j.role + j.org} style={{ display: "grid", gridTemplateColumns: mobile ? "1fr" : "350px 1fr", gap: mobile ? "12px" : "40px" }}>
+            <div key={j.role + j.org} style={{ display: "grid", gridTemplateColumns: mobile ? "1fr" : "440px 1fr", gap: mobile ? "12px" : "40px" }}>
               <div>
-                <RuledHeading level="sub" align="left" style={{ fontSize: "28px" }}>{j.role}</RuledHeading>
+                <RuledHeading level="sub" align="left" style={{ fontSize: "25px" }}>{j.role}</RuledHeading>
                 <div style={{ ...label, fontSize: "16px", color: "var(--accent-quiet)", marginTop: "8px" }}>{j.org}</div>
               </div>
               <div>
@@ -259,9 +259,6 @@ export function Resume({ DS }) {
               </div>
             </div>
           ))}
-        </div>
-        <div style={{ textAlign: "center", marginTop: "88px" }}>
-          <Button variant="filled">Download PDF</Button>
         </div>
       </div>
     </div>

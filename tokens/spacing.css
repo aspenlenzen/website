@@ -8,7 +8,9 @@
   --space-6: 104px;
   --space-section: 160px; /* vertical rhythm between page bands */
 
-  --radius-none: 0px;     /* the system is square-cornered throughout */
-  --rule-weight: 1.5px;   /* horizontal rules framing headings */
+  --radius-none: 0px;
+  --radius-pill: 999px;   /* signature pill buttons & tags */
+  --radius-card: 14px;    /* cards & images */
+  --rule-weight: 1px;     /* tan hairline rules, used sparingly */
   --measure-body: 46ch;   /* max width of body paragraphs */
 }

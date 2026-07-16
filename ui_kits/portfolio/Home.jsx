@@ -74,7 +74,7 @@ export function Home({ DS, onNavigate }) {
       {/* About */}
       <div style={{ display: "grid", gridTemplateColumns: mobile ? "1fr" : "1fr 1fr", alignItems: "center" }}>
         <div style={{ padding: mobile ? "40px 24px" : "40px 64px" }}>
-          <RuledHeading level="section" align="left" style={{ marginBottom: "40px", textTransform: "capitalize" }}>
+          <RuledHeading level="section" align="left" style={{ marginBottom: "40px", fontSize: "45px", textTransform: "capitalize" }}>
             About Me
           </RuledHeading>
           <div style={{ ...body, display: "flex", flexDirection: "column", gap: "20px" }}>

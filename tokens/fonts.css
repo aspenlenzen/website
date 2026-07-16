@@ -1,4 +1,4 @@
-/* Webfonts — Google Fonts.
-   Cormorant Garamond: high-contrast display serif (matches the current site's headings).
-   Karla: warm humanist grotesque for body copy. */
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Karla:ital,wght@0,400;0,500;0,700;1,400&display=swap");
+/* Webfonts — Google Fonts (personal-site-brand).
+   Cinzel: Roman inscriptional capitals (free Trajan Pro equivalent) — headings only.
+   Tenor Sans: single-weight classical humanist sans — body, labels, buttons. */
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Tenor+Sans&display=swap");

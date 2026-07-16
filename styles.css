@@ -3,6 +3,10 @@
 @import url("tokens/typography.css");
 @import url("tokens/spacing.css");
 
+/* Tenor Sans ships a single (regular) weight — never synthesize faux-bold.
+   Emphasis on-brand comes from the rust accent, size, and spacing. */
+body, body * { font-synthesis: none; }
+
 @keyframes logo-marquee {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
