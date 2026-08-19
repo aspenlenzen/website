@@ -11,5 +11,5 @@ body, body * { font-synthesis: none; }
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
 }
-.logo-marquee-track { animation: logo-marquee 78s linear infinite; }
+.logo-marquee-track { animation: logo-marquee 55s linear infinite; }
 .logo-marquee-viewport:hover .logo-marquee-track { animation-play-state: paused; }
