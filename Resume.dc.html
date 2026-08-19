@@ -198,7 +198,7 @@ a:hover { color: #414522; }
             <div style="font-size: 15px; letter-spacing: 0.12em; text-transform: uppercase; color: #354A2F; padding-top: 10px; margin-bottom: 16px">{{ job.dates }}</div>
             <ul style="font-size: 15px; line-height: 1.65; color: #26291C; margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px">
               <sc-for list="{{ job.bullets }}" as="bullet" hint-placeholder-count="4">
-                <li>{{ bullet }}</li>
+                <li style="font-style: italic">{{ bullet }}</li>
               </sc-for>
             </ul>
           </div>
@@ -320,11 +320,11 @@ class Component extends DCLogic {
           "Built and launched Airtable and Zapier-based systems supporting program tracking, participation metrics, and cross-team visibility; onboarded and trained 50+ users.",
         ] },
         { role: "Program & Operations Manager", org: "The Stamford Partnership", dates: "September 2025 — July 2026", bullets: [
-          "Led end-to-end delivery of 6 community-facing programs, designing scalable operations to strengthen partner engagement and program impact",
-          "Owned program operations across timelines, deliverables, and cross-partner coordination, ensuring successful execution across stakeholders",
+          "Led end-to-end delivery of 6 community-facing programs, owning operations, timelines, deliverables, and cross-partner coordination while designing processes to strengthen partner engagement and impact.",
           "Oversaw program budgets and financial reporting, maintaining transparency and alignment with funder and board expectations",
           "Built dashboards and reporting frameworks using Notion and Airtable to track participation, outcomes, and budget performance, enabling data-informed decision-making",
           "Cultivated and manage relationships with 20+ community partners, sponsors, and vendors to support long-term collaboration and program growth",
+          "Owned internal and external communications reaching a 20,000-person distribution list, developing strategies that increased program awareness, stakeholder engagement, and community participation.",
           "Planned and executed annual fundraiser using Givebutter, for 125+ people, exceeding attendance goals and raising over $100k.",
         ] },
         { role: "Program & Operations Manager — Learning & Development", org: "Cisco", dates: "June 2024 — July 2025", bullets: [
@@ -373,10 +373,10 @@ class Component extends DCLogic {
       ],
       tools: [
         ["Adobe CS", "adobe"], ["Airtable", "airtable"], ["Asana", "asana"], ["Automations", ""],
-        ["Canva", "canva"], ["CRMs", ""], ["Figma", "figma"], ["Funraise", "https://www.google.com/s2/favicons?domain=funraise.org&sz=64"], ["Givebutter", "https://www.google.com/s2/favicons?domain=givebutter.com&sz=64"], ["Google Suite", "https://www.google.com/s2/favicons?domain=google.com&sz=64"], ["Greenhouse", "greenhouse"],
+        ["Canva", "canva"], ["ChatGPT", "openai"], ["Claude", "https://www.google.com/s2/favicons?domain=claude.ai&sz=64"], ["CRMs", ""], ["Figma", "figma"], ["Funraise", "https://www.google.com/s2/favicons?domain=funraise.org&sz=64"], ["Github", "github"], ["Givebutter", "https://www.google.com/s2/favicons?domain=givebutter.com&sz=64"], ["Google Suite", "https://www.google.com/s2/favicons?domain=google.com&sz=64"], ["Greenhouse", "greenhouse"],
         ["Hubspot", "hubspot"], ["Hootsuite", "hootsuite"], ["HRIS\u2019s", ""], ["Justworks", "https://www.google.com/s2/favicons?domain=justworks.com&sz=64"],
-        ["Microsoft Office Suite", "https://www.google.com/s2/favicons?domain=microsoft.com&sz=64"], ["Monday.com", "https://www.google.com/s2/favicons?domain=monday.com&sz=64"], ["Notion", "notion"], ["Salesforce", "salesforce"],
-        ["Slack", "slack"], ["Zapier", "zapier"],
+        ["Mailchimp", "mailchimp"], ["Microsoft Office Suite", "https://www.google.com/s2/favicons?domain=microsoft.com&sz=64"], ["Miro", "https://www.google.com/s2/favicons?domain=miro.com&sz=64"], ["Monday.com", "https://www.google.com/s2/favicons?domain=monday.com&sz=64"], ["Notion", "notion"], ["Salesforce", "salesforce"],
+        ["Slack", "slack"], ["Typeform", "typeform"], ["Vercel", "vercel"], ["Zapier", "zapier"],
       ].map(([name, slug]) => ({
         name,
         hasIcon: !!slug,
