@@ -1,0 +1,21 @@
+:root {
+  /* ── Families ─────────────────────────────────────────── */
+  --font-display: "Cinzel", "Trajan Pro", "Times New Roman", serif;
+  --font-body: "Tenor Sans", "Helvetica Neue", sans-serif;
+
+  /* ── Display scale — Cinzel, Title Case (never text-transform) ─ */
+  --type-hero-size: 46px;        /* page hero (h1) */
+  --type-hero-tracking: 0.03em;
+  --type-h1-size: 30px;          /* section titles (h2) */
+  --type-h1-tracking: 0.03em;
+  --type-h2-size: 21px;          /* sub-heads (h3) */
+  --type-display-weight: 400;
+  --type-display-leading: 1.15;
+
+  /* ── Body scale — Tenor Sans, regular weight only ─────── */
+  --type-body-size: 17px;
+  --type-body-leading: 1.75;
+  --type-small-size: 14px;
+  --type-label-size: 13px;       /* buttons, nav, labels/tags */
+  --type-label-tracking: 0.1em;  /* uppercase-via-CSS labels */
+}
