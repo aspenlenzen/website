@@ -2,7 +2,7 @@
 
 Personal portfolio design system. Direction: keep the current site's quiet editorial elegance (serif caps, thin rules, parchment ground, golden-hour photography) and warm it up with an outdoorsy, adventure-leaning palette — approved by the user with **forest-green ink instead of black**.
 
-**Sources:** the live site https://aspenlenzen.wixsite.com/hello (Home + Resume pages — all copy, logo, and photos copied from it into this system) plus two screenshots in `uploads/`. No codebase or Figma provided. The owl wax-seal logo is at `assets/owl_wax_seal.png`; four site photos are in `assets/`.
+**Sources:** the live site https://aspenlenzen.wixsite.com/hello (Home + Resume pages — all copy, logo, and photos copied from it into this system). No codebase or Figma provided. The owl wax-seal logo is at `assets/owl_wax_seal.png`; the site photos and partner logos are in `assets/` and `assets/logos/`.
 
 ## Content fundamentals
 - First person, warm and unguarded: "Hi, I'm Aspen!" — occasional exclamation points, parenthetical asides "(except the ones with me in it!)".
