@@ -280,28 +280,23 @@
   </sc-if>
 
   <footer id="contact" style="background: #26291C; padding: 20px; color: #F5F1E8">
-    <div class="r-footgrid" style="max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 20px; align-items: stretch">
-    <div style="background: #6A6D52; border-radius: 22px; padding: 48px; display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1fr); gap: 48px; position: relative; overflow: hidden">
+    <div class="r-footgrid" style="max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 40fr) minmax(0, 60fr); gap: 20px; align-items: stretch">
+    <div style="background: #6A6D52; border-radius: 22px; padding: 48px; display: flex; flex-direction: column; gap: 20px; justify-content: flex-start; position: relative; overflow: hidden">
         
-        <div style="display: flex; flex-direction: column; gap: 16px; justify-content: flex-start; position: relative">
+        <div style="display: flex; flex-direction: column; gap: 12px; position: relative">
           <h2 style="font-family: 'Cinzel', serif; font-weight: 400; font-size: clamp(24px, 2.2vw, 32px); line-height: 1.25; letter-spacing: 0.01em; color: #F5F1E8; margin: 0">Let's get in touch.</h2>
-          <p style="font-size: 15px; line-height: 1.7; color: #F0E6D6; margin: 0; max-width: 320px">Have a project in mind or just want to say hi? I'd love to hear from you.</p>
+          <p style="font-size: 15px; line-height: 1.6; color: #F0E6D6; margin: 0">Have a project in mind or just want to say hi? I'd love to hear from you.</p>
           
         </div>
-        <div style="display: grid; gap: 14px; position: relative">
-          <div class="r-namerow" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 14px">
-            <input type="text" placeholder="Name" class="r-contact-field" style="background: rgba(38,41,28,0.25); border: 1px solid rgba(245,241,232,0.5); border-radius: 8px; padding: 13px 16px; font-family: 'Tenor Sans', sans-serif; font-size: 14px; color: #F5F1E8">
-            <input type="email" placeholder="Email" class="r-contact-field" style="background: rgba(38,41,28,0.25); border: 1px solid rgba(245,241,232,0.5); border-radius: 8px; padding: 13px 16px; font-family: 'Tenor Sans', sans-serif; font-size: 14px; color: #F5F1E8">
-          </div>
-          <textarea rows="3" placeholder="Message" class="r-contact-field" style="background: rgba(38,41,28,0.25); border: 1px solid rgba(245,241,232,0.5); border-radius: 8px; padding: 13px 16px; font-family: 'Tenor Sans', sans-serif; font-size: 14px; color: #F5F1E8; resize: vertical"></textarea>
+        <div style="display: grid; gap: 12px; position: relative">
           <button type="button" onClick="{{ submit }}" style="justify-self: start; display: flex; align-items: center; gap: 10px; background: #672E23; color: #F5F1E8; border: none; border-radius: 999px; padding: 15px 32px; font-family: 'Tenor Sans', sans-serif; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; cursor: pointer" style-hover="background: #4E2119">Send Message<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#F5F1E8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></button>
           <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
-            <div style="font-size: 14px; color: #26291C">Thank you — your note has been received.</div>
+            <div style="font-size: 14px; color: #F0E6D6">Your email app should open with bopoconsulting@gmail.com in the To field.</div>
           </sc-if>
         </div>
       </div>
-      <div style="background: rgba(245,241,232,0.05); border-radius: 22px; padding: 40px 48px; display: flex; align-items: center">
-        <div class="r-footlinks" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 24px">
+      <div style="background: rgba(245,241,232,0.05); border-radius: 22px; padding: 48px; display: flex; align-items: flex-start">
+        <div class="r-footlinks" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px 24px; width: 100%">
           <div style="display: flex; flex-direction: column; gap: 22px">
             <div style="font-size: 14px; letter-spacing: 0.2em; text-transform: uppercase; color: #F5F1E8; font-weight: 700">Pages</div>
             <div style="display: flex; flex-direction: column; gap: 16px; font-size: 16px">
@@ -335,7 +330,8 @@
 <script type="text/x-dc" data-dc-script data-props="{
   &quot;heroX&quot;: { &quot;editor&quot;: &quot;range&quot;, &quot;default&quot;: 38, &quot;min&quot;: 0, &quot;max&quot;: 100, &quot;step&quot;: 1, &quot;unit&quot;: &quot;%&quot;, &quot;tsType&quot;: &quot;number&quot;, &quot;section&quot;: &quot;Hero photo&quot; },
   &quot;heroY&quot;: { &quot;editor&quot;: &quot;range&quot;, &quot;default&quot;: 50, &quot;min&quot;: 0, &quot;max&quot;: 100, &quot;step&quot;: 1, &quot;unit&quot;: &quot;%&quot;, &quot;tsType&quot;: &quot;number&quot;, &quot;section&quot;: &quot;Hero photo&quot; },
-  &quot;heroZoom&quot;: { &quot;editor&quot;: &quot;range&quot;, &quot;default&quot;: 100, &quot;min&quot;: 100, &quot;max&quot;: 200, &quot;step&quot;: 1, &quot;unit&quot;: &quot;%&quot;, &quot;tsType&quot;: &quot;number&quot;, &quot;section&quot;: &quot;Hero photo&quot; }
+  &quot;heroZoom&quot;: { &quot;editor&quot;: &quot;range&quot;, &quot;default&quot;: 100, &quot;min&quot;: 100, &quot;max&quot;: 200, &quot;step&quot;: 1, &quot;unit&quot;: &quot;%&quot;, &quot;tsType&quot;: &quot;number&quot;, &quot;section&quot;: &quot;Hero photo&quot; },
+  &quot;contactEmail&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;bopoconsulting@gmail.com&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Contact form&quot; }
 }">
 const TESTIMONIALS = [
   { quote: "I had the pleasure of working with Aspen and was impressed by her curiosity and commitment to growth. Aspen approaches challenges with thoughtfulness and brings a unique perspective that enhances collaboration and problem-solving. She is naturally tech-savvy and quick to adopt new tools, which allows her to contribute efficiently and effectively.", name: "Ash Watts", title: "Learning & Development Leader, Cisco" },
@@ -441,7 +437,14 @@ class Component extends DCLogic {
       heroPos: `${this.props.heroX ?? 50}% ${this.props.heroY ?? 50}%`,
       heroZoomFactor: (this.props.heroZoom ?? 100) / 100,
       sent: this.state.sent,
-      submit: () => this.setState({ sent: true }),
+      nameRef: (el) => (this._name = el),
+      emailRef: (el) => (this._email = el),
+      msgRef: (el) => (this._msg = el),
+      submit: () => {
+        const to = this.props.contactEmail ?? "bopoconsulting@gmail.com";
+        window.location.href = `mailto:${to}`;
+        this.setState({ sent: true });
+      },
       s0: this.slot(0), s1: this.slot(1), s2: this.slot(2), s3: this.slot(3), s4: this.slot(4),
       companyTags: companyTags.map((t) => this.tagChip(t, "company")),
       contractTags: contractTags.map((t) => this.tagChip(t, "contract")),

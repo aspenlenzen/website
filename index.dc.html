@@ -225,28 +225,23 @@ a:hover { color: #414522; }
   
 
   <footer id="contact" style="background: #26291C; padding: 20px; color: #F5F1E8">
-    <div class="r-footgrid" style="max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 20px; align-items: stretch">
-    <div style="background: #6A6D52; border-radius: 22px; padding: 48px; display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1fr); gap: 48px; position: relative; overflow: hidden">
+    <div class="r-footgrid" style="max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 40fr) minmax(0, 60fr); gap: 20px; align-items: stretch">
+    <div style="background: #6A6D52; border-radius: 22px; padding: 48px; display: flex; flex-direction: column; gap: 20px; justify-content: flex-start; position: relative; overflow: hidden">
         
-        <div style="display: flex; flex-direction: column; gap: 16px; justify-content: flex-start; position: relative">
+        <div style="display: flex; flex-direction: column; gap: 12px; position: relative">
           <h2 style="font-family: 'Cinzel', serif; font-weight: 400; font-size: clamp(24px, 2.2vw, 32px); line-height: 1.25; letter-spacing: 0.01em; color: #F5F1E8; margin: 0">Let's get in touch.</h2>
-          <p style="font-size: 15px; line-height: 1.7; color: #F0E6D6; margin: 0; max-width: 320px">Have a project in mind or just want to say hi? I'd love to hear from you.</p>
+          <p style="font-size: 15px; line-height: 1.6; color: #F0E6D6; margin: 0">Have a project in mind or just want to say hi? I'd love to hear from you.</p>
           
         </div>
-        <div style="display: grid; gap: 14px; position: relative">
-          <div class="r-namerow" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 14px">
-            <input type="text" placeholder="Name" class="r-contact-field" style="background: rgba(38,41,28,0.25); border: 1px solid rgba(245,241,232,0.5); border-radius: 8px; padding: 13px 16px; font-family: 'Tenor Sans', sans-serif; font-size: 14px; color: #F5F1E8">
-            <input type="email" placeholder="Email" class="r-contact-field" style="background: rgba(38,41,28,0.25); border: 1px solid rgba(245,241,232,0.5); border-radius: 8px; padding: 13px 16px; font-family: 'Tenor Sans', sans-serif; font-size: 14px; color: #F5F1E8">
-          </div>
-          <textarea rows="3" placeholder="Message" class="r-contact-field" style="background: rgba(38,41,28,0.25); border: 1px solid rgba(245,241,232,0.5); border-radius: 8px; padding: 13px 16px; font-family: 'Tenor Sans', sans-serif; font-size: 14px; color: #F5F1E8; resize: vertical"></textarea>
+        <div style="display: grid; gap: 12px; position: relative">
           <button type="button" onClick="{{ submit }}" style="justify-self: start; display: flex; align-items: center; gap: 10px; background: #672E23; color: #F5F1E8; border: none; border-radius: 999px; padding: 15px 32px; font-family: 'Tenor Sans', sans-serif; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; cursor: pointer" style-hover="background: #4E2119">Send Message<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#F5F1E8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></button>
           <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
-            <div style="font-size: 14px; color: #26291C">Thank you — your note has been received.</div>
+            <div style="font-size: 14px; color: #F0E6D6">Your email app should open with bopoconsulting@gmail.com in the To field.</div>
           </sc-if>
         </div>
       </div>
-      <div style="background: rgba(245,241,232,0.05); border-radius: 22px; padding: 40px 48px; display: flex; align-items: center">
-        <div class="r-footlinks" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 24px">
+      <div style="background: rgba(245,241,232,0.05); border-radius: 22px; padding: 48px; display: flex; align-items: flex-start">
+        <div class="r-footlinks" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px 24px; width: 100%">
           <div style="display: flex; flex-direction: column; gap: 22px">
             <div style="font-size: 14px; letter-spacing: 0.2em; text-transform: uppercase; color: #F5F1E8; font-weight: 700">Pages</div>
             <div style="display: flex; flex-direction: column; gap: 16px; font-size: 16px">
@@ -330,7 +325,10 @@ class Component extends DCLogic {
       bioPos: `${this.props.bioX ?? 50}% ${this.props.bioY ?? 50}%`,
       showStats: this.props.showStats ?? true,
       sent: this.state.sent,
-      submit: () => this.setState({ sent: true }),
+      submit: () => {
+        window.location.href = "mailto:bopoconsulting@gmail.com";
+        this.setState({ sent: true });
+      },
       logos: [
         { src: "assets/logos/cisco.png", alt: "Cisco" },
         { src: "assets/logos/avail.webp", alt: "Avail" },
