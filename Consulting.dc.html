@@ -12,8 +12,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&amp;family=Tenor+Sans&amp;display=swap" rel="stylesheet">
 <style>
   body { margin: 0; background: #F5F1E8; }
-  a { color: #672E23; }
-  a:hover { color: #5C724A; }
+  a { color: #414522; }
+  a:hover { color: #8A6A45; }
   .r-contact-field::placeholder { color: rgba(245,241,232,0.65); }
 @media (max-width: 640px) {
   .r-namerow { grid-template-columns: minmax(0, 1fr) !important; }
@@ -23,6 +23,8 @@
   @media (max-width: 920px) {
     .r-shell { padding-left: 24px !important; padding-right: 24px !important; }
     .r-footgrid { grid-template-columns: minmax(0, 1fr) !important; }
+    .r-footgrid > div:first-child { align-items: center !important; text-align: center !important; }
+    .r-footgrid > div:first-child button, .r-footgrid > div:first-child a { justify-self: center !important; align-self: center !important; }
     .r-footlinks { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
     .c-hero { grid-template-columns: 1fr !important; gap: 32px !important; padding: 12px 0 56px !important; }
     .c-hero-left { padding-top: 0 !important; align-items: center !important; text-align: center !important; }
@@ -53,11 +55,11 @@
           <span style="font-family: 'Cinzel', serif; font-size: 19px; letter-spacing: 0.08em; color: #414522">ASPEN</span>
         </a>
         <div class="r-navlinks" style="display: flex; gap: 60px; font-size: 17px; letter-spacing: 0.08em">
-          <a href="index.dc.html" style="color: #414522; text-decoration: none; border-bottom: 1.5px solid transparent; padding-bottom: 4px" style-hover="color: #672E23">Home</a>
-          <a href="Resume.dc.html" style="color: #414522; text-decoration: none; border-bottom: 1.5px solid transparent; padding-bottom: 4px" style-hover="color: #672E23">Resume</a>
-          <a href="Consulting.dc.html" aria-current="page" style="color: #672E23; text-decoration: none; border-bottom: 1.5px solid #672E23; padding-bottom: 4px">Consulting</a>
+          <a href="index.dc.html" style="color: #414522; text-decoration: none; border-bottom: 1.5px solid transparent; padding-bottom: 4px" style-hover="color: #8A6A45">Home</a>
+          <a href="Resume.dc.html" style="color: #414522; text-decoration: none; border-bottom: 1.5px solid transparent; padding-bottom: 4px" style-hover="color: #8A6A45">Resume</a>
+          <a href="Consulting.dc.html" aria-current="page" style="color: #414522; text-decoration: none; border-bottom: 1.5px solid #414522; padding-bottom: 4px">Consulting</a>
         </div>
-        <a href="#contact" style="background: #672E23; color: #F5F1E8; border-radius: 999px; padding: 13px 32px; font-size: 15px; text-decoration: none; white-space: nowrap" style-hover="background: #4E2119">Let's talk</a>
+        <a href="#contact" style="background: #414522; color: #F5F1E8; border: 1.5px solid #414522; border-radius: 999px; padding: 13px 32px; font-size: 15px; text-decoration: none; white-space: nowrap; transition: background 0.25s ease, color 0.25s ease" style-hover="background: transparent; color: #414522">Let's talk</a>
       </nav>
 
       <div class="c-hero" style="display: grid; grid-template-columns: minmax(0, 1fr) clamp(260px, 30vw, 420px) minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); align-items: stretch; padding: 40px 0 64px">
@@ -69,7 +71,7 @@
           <img src="assets/garden_of_the_gods.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block; transform: scale({{ heroZoomFactor }}); object-position: {{ heroPos }}">
         </div>
         <div class="c-hero-right" style="display: flex; flex-direction: column; justify-content: flex-end; max-width: 360px; padding-bottom: 24px; align-items: flex-start">
-          <h2 style="font-family: 'Cinzel', serif; font-weight: 400; font-size: clamp(28px, 3vw, 40px); line-height: 1.15; letter-spacing: 0.01em; color: #2D4A31; margin: 0 0 8px; display: inline-block; border-bottom: 3px solid #672E23; padding-bottom: 8px">Independent Consulting</h2>
+          <h2 style="font-family: 'Cinzel', serif; font-weight: 400; font-size: clamp(28px, 3vw, 40px); line-height: 1.15; letter-spacing: 0.01em; color: #2D4A31; margin: 0 0 8px; display: inline-block; border-bottom: 3px solid #8A6A45; padding-bottom: 8px">Independent Consulting</h2>
           <p style="font-size: 15px; line-height: 1.75; color: #26291C; margin: 20px 0 0">I partner with founders and small teams to turn operational chaos into systems, building custom Airtable databases and internal tools, designing operations and program workflows, and helping customers and communities connect.</p>
         </div>
       </div>
@@ -87,7 +89,7 @@
 
         <div style="display: flex; flex-direction: column; gap: 24px; margin-bottom: 32px">
           <div class="c-testi-row" style="display: flex; gap: 24px">
-            <div style="background: #672E23; border-radius: 22px; padding: 30px; display: flex; flex-direction: column; gap: 16px; flex: 1.6 1 0%; min-height: 230px; transition: transform 1.8s ease-in-out; transform: {{ s0.turn }}; width: 619px; height: 226px">
+            <div style="background: #8A6A45; border-radius: 22px; padding: 30px; display: flex; flex-direction: column; gap: 16px; flex: 1.6 1 0%; min-height: 230px; transition: transform 1.8s ease-in-out; transform: {{ s0.turn }}; width: 619px; height: 226px">
               <div style="display: flex; flex-direction: column; gap: 16px; flex: 1; transform: {{ s0.face }}">
                 <p style="font-size: 16px; line-height: 1.65; color: #F0E6D6; margin: 0; flex: 1">{{ s0.quote }}</p>
                 <div>
@@ -116,7 +118,7 @@
                 </div>
               </div>
             </div>
-            <div style="background: #26291C; border-radius: 22px; padding: 30px; display: flex; flex-direction: column; gap: 16px; min-height: 230px; transition: transform 1.8s ease-in-out; transform: {{ s3.turn }}">
+            <div style="background: #414522; border-radius: 22px; padding: 30px; display: flex; flex-direction: column; gap: 16px; min-height: 230px; transition: transform 1.8s ease-in-out; transform: {{ s3.turn }}">
               <div style="display: flex; flex-direction: column; gap: 16px; flex: 1; transform: {{ s3.face }}">
                 <p style="font-size: 14px; line-height: 1.65; color: #E8DFCF; margin: 0; flex: 1">{{ s3.quote }}</p>
                 <div>
@@ -181,20 +183,20 @@
             </div>
             <div style="display: flex; gap: 8px; flex-wrap: wrap">
               <sc-for list="{{ c.contractChips }}" as="chip" hint-placeholder-count="2">
-                <span style="font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; border-radius: 999px; padding: 5px 12px; background: rgba(103, 46, 35, 0.12); color: #672E23">{{ chip }}</span>
+                <span style="font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; border-radius: 999px; padding: 5px 12px; background: rgba(138, 106, 69, 0.12); color: #8A6A45">{{ chip }}</span>
               </sc-for>
             </div>
           </div>
           <div>
-            <div style="font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #672E23; margin-bottom: 8px">The Client</div>
+            <div style="font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #8A6A45; margin-bottom: 8px">The Client</div>
             <p style="font-size: 14px; line-height: 1.65; color: #26291C; margin: 0">{{ c.company }}</p>
           </div>
           <div>
-            <div style="font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #672E23; margin-bottom: 8px">The Challenge</div>
+            <div style="font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #8A6A45; margin-bottom: 8px">The Challenge</div>
             <p style="font-size: 14px; line-height: 1.65; color: #26291C; margin: 0">{{ c.problem }}</p>
           </div>
           <sc-if value="{{ c.readable }}" hint-placeholder-val="{{ true }}">
-            <div style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #672E23; margin-top: auto">Read More →</div>
+            <div style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #8A6A45; margin-top: auto">Read More →</div>
           </sc-if>
         </div>
       </sc-for>
@@ -202,7 +204,7 @@
 
     <sc-if value="{{ hasMore }}" hint-placeholder-val="{{ true }}">
       <div class="c-more" style="max-width: 1280px; margin: 0 auto; padding: 72px 48px 0; display: flex; justify-content: center">
-        <button onClick="{{ toggleGallery }}" style="font-family: 'Tenor Sans', sans-serif; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; color: #672E23; background: none; border: 1px solid #672E23; border-radius: 999px; padding: 10px 24px; cursor: pointer">{{ moreLabel }}</button>
+        <button onClick="{{ toggleGallery }}" style="font-family: 'Tenor Sans', sans-serif; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; color: #414522; background: none; border: 1px solid #8A6A45; border-radius: 999px; padding: 10px 24px; cursor: pointer">{{ moreLabel }}</button>
       </div>
     </sc-if>
   </main>
@@ -212,7 +214,7 @@
       <div class="c-dialog" onClick="{{ stop }}" role="dialog" aria-modal="true" aria-label="{{ openCs.dialogLabel }}" tabIndex="-1" ref="{{ dialogRef }}" style="width: 50%; min-width: 0; max-height: 82vh; overflow-y: auto; background: #F5F1E8; border: 1px solid #D0B59A; border-radius: 12px; padding: 56px 64px">
         <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 24px">
           <h2 class="c-dialog-title" style="font-family: 'Cinzel', serif; font-weight: 400; font-size: 36px; line-height: 1.15; letter-spacing: 0.03em; color: #5C724A; margin: 0; border-bottom: 1px solid #D0B59A; padding-bottom: 12px">{{ openCs.client }}</h2>
-          <button onClick="{{ close }}" aria-label="Close" style="background: none; border: none; font-family: 'Tenor Sans', sans-serif; font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; color: #672E23; cursor: pointer; padding: 6px 0; white-space: nowrap">Close ✕</button>
+          <button onClick="{{ close }}" aria-label="Close" style="background: none; border: none; font-family: 'Tenor Sans', sans-serif; font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; color: #8A6A45; cursor: pointer; padding: 6px 0; white-space: nowrap">Close ✕</button>
         </div>
         <p style="font-size: 15px; line-height: 1.65; color: #26291C; margin: 20px 0 0">{{ openCs.company }}</p>
 
@@ -229,7 +231,7 @@
               <sc-if value="{{ s.hasBeforeAfter }}" hint-placeholder-val="{{ false }}">
                 <div class="c-two-col" style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 8px">
                   <div>
-                    <div style="font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #672E23; margin-bottom: 12px">Before</div>
+                    <div style="font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #8A6A45; margin-bottom: 12px">Before</div>
                     <ul style="font-size: 14px; line-height: 1.65; color: #26291C; margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 8px">
                       <sc-for list="{{ s.before }}" as="b" hint-placeholder-count="4">
                         <li>{{ b }}</li>
@@ -250,7 +252,7 @@
                 <div style="display: flex; flex-direction: column; gap: 20px">
                   <sc-for list="{{ s.solutions }}" as="sol" hint-placeholder-count="4">
                     <div style="display: grid; grid-template-columns: 24px 1fr; gap: 12px">
-                      <span style="color: #672E23">→</span>
+                      <span style="color: #8A6A45">→</span>
                       <div>
                         <div style="font-size: 15px; font-weight: 700; color: #5C724A; margin-bottom: 4px">{{ sol.title }}</div>
                         <p style="font-size: 14px; line-height: 1.65; color: #26291C; margin: 0">{{ sol.body }}</p>
@@ -289,7 +291,7 @@
           
         </div>
         <div style="display: grid; gap: 12px; position: relative">
-          <button type="button" onClick="{{ submit }}" style="justify-self: start; display: flex; align-items: center; gap: 10px; background: #672E23; color: #F5F1E8; border: none; border-radius: 999px; padding: 15px 32px; font-family: 'Tenor Sans', sans-serif; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; cursor: pointer" style-hover="background: #4E2119">Send Message<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#F5F1E8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></button>
+          <button type="button" onClick="{{ submit }}" style="justify-self: start; display: flex; align-items: center; gap: 10px; background: #414522; color: #F5F1E8; border: none; border-radius: 999px; padding: 15px 32px; font-family: 'Tenor Sans', sans-serif; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; cursor: pointer" style-hover="background: #2F4428">Send Message<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#F5F1E8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></button>
           <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
             <div style="font-size: 14px; color: #F0E6D6">Your email app should open with bopoconsulting@gmail.com in the To field.</div>
           </sc-if>
@@ -300,9 +302,9 @@
           <div style="display: flex; flex-direction: column; gap: 22px">
             <div style="font-size: 14px; letter-spacing: 0.2em; text-transform: uppercase; color: #F5F1E8; font-weight: 700">Pages</div>
             <div style="display: flex; flex-direction: column; gap: 16px; font-size: 16px">
-              <a href="index.dc.html" style="color: #6A6D52; text-decoration: none" style-hover="color: #672E23">Home</a>
-              <a href="Resume.dc.html" style="color: #6A6D52; text-decoration: none" style-hover="color: #672E23">Resume</a>
-              <a href="Consulting.dc.html" style="color: #6A6D52; text-decoration: underline" style-hover="color: #672E23">Consulting</a>
+              <a href="index.dc.html" style="color: #6A6D52; text-decoration: none" style-hover="color: #8A6A45">Home</a>
+              <a href="Resume.dc.html" style="color: #6A6D52; text-decoration: none" style-hover="color: #8A6A45">Resume</a>
+              <a href="Consulting.dc.html" style="color: #6A6D52; text-decoration: underline" style-hover="color: #8A6A45">Consulting</a>
             </div>
           </div>
           <div style="display: flex; flex-direction: column; gap: 22px">
@@ -407,7 +409,7 @@ class Component extends DCLogic {
 
   tagChip(label, kind) {
     const active = this.state.selected.includes(label);
-    const accent = kind === "company" ? "#5C724A" : "#672E23";
+    const accent = kind === "company" ? "#5C724A" : "#8A6A45";
     return {
       label, active,
       color: active ? "#F5F1E8" : accent,
@@ -449,7 +451,7 @@ class Component extends DCLogic {
       companyTags: companyTags.map((t) => this.tagChip(t, "company")),
       contractTags: contractTags.map((t) => this.tagChip(t, "contract")),
       clearFilters: () => this.setState({ selected: [] }),
-      clearColor: selected.length ? "#672E23" : "#26291C",
+      clearColor: selected.length ? "#8A6A45" : "#26291C",
       hasMore: allVisible.length > 6,
       moreLabel: expanded ? "Show Less ↑" : "Show More ↓",
       toggleGallery: () => this.setState((s) => ({ expanded: !s.expanded })),

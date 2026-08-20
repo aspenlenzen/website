@@ -2,14 +2,14 @@
   /* ── Personal-site-brand palette ───────────────────────── */
   --color-cream: #F5F1E8;   /* page background — the default canvas */
   --color-ink:   #26291C;   /* body text — near-black olive */
-  --color-rust:  #672E23;   /* THE accent: links, primary buttons, highlights */
+  --color-rust:  #8A6A45;   /* THE accent: links, primary buttons, highlights */
   --color-olive: #5C724A;   /* headings, footer, strong structure */
   --color-sage:  #A3B68A;   /* secondary buttons, tag borders */
   --color-taupe: #8B856C;   /* muted text: captions, dates, metadata */
   --color-tan:   #D0B59A;   /* card tint, dividers, hairlines */
 
   /* Support shades derived from the palette */
-  --color-rust-deep:  #4E2119;
+  --color-rust-deep:  #6B5133;
   --color-olive-deep: #354A2F;
   --color-cream-tint: #EDE4D3; /* subtle tan-tinted card fill */
 
